@@ -1,5 +1,5 @@
 import java.util.*;
-public class CaesarVerschluesselung {
+public class CaesarVerschluesselung1 {
 
 	public static void main(String[] args) {
 		int auswahl = 0;
@@ -33,7 +33,7 @@ public class CaesarVerschluesselung {
 		for (int i = 0; i < text.length(); i++) {
 			int a = text.charAt(i);
 			int b = a + verschiebung;
-			if (b > 90) {			//das Unicode-Zeichen als Dezimalzahl für den letzten Großbuchstaben im Alphabet (Z) ist 90; wenn die Zahl darüber liegt, muss man also wieder zum Anfang des Alphabets zurückspringen (Z um 1 nach rechts verschoben ist A)
+			if (b > 90) {			//das  Unicode-Zeichen als Dezimalzahl für den letzten Großbuchstaben im Alphabet (Z) ist 90; wenn die Zahl darüber liegt, muss man also wieder zum Anfang des Alphabets zurückspringen (Z um 1 nach rechts verschoben ist A)
 				b = b - 26;
 			}
 			char zeichen = (char) b;
