@@ -6,11 +6,14 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 import org.junit.jupiter.api.Test;
+
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 import java.util.*;
+import java.util.*
+;class CaesarVerschluesselung1Test {
 
-class CaesarVerschluesselung1Test {
-
-	public CaesarVerschluesselung1 caesar;
+	public CaesarVerschluesselung1testbar caesar;
 	
 	@Test
 	void test() {
@@ -19,11 +22,26 @@ class CaesarVerschluesselung1Test {
 	
 	@Test
 	void verschluesselnTest() {
-	caesar = new CaesarVerschluesselung1();
-	PrintWriter senden = new PrintWriter(new BufferedWriter(new OutputStreamWriter()),true);
-	caesar.eingabeSchluessel(senden(1));
-	String text = caesar.verschluesseln("Hallo");
-	assertEquals("IBMMP", text);
+	caesar = new CaesarVerschluesselung1testbar();
+	
+	String text = caesar.verschluesseln();
+	assertEquals("IBMMP XFMU! ?.", text);
 	}
 
+	@Test
+	void entschluesselnTest() {
+		caesar = new CaesarVerschluesselung1testbar();
+		
+		String text = caesar.entschluesseln();
+		assertEquals("ICH BIN 19 JAHRE ALT! UMLAUT Ö", text);
+	}
+	
+	@Test
+	void entschluesseln2Test() {
+		caesar = new CaesarVerschluesselung1testbar();
+		
+		String text = caesar.entschluesseln2();
+		assertEquals("ICH BIN EIN VERSCHLÜSSELTER TEXT", text);
+	}
+	
 }
