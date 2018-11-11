@@ -15,10 +15,6 @@ import java.util.*
 
 	public CaesarVerschluesselung1testbar caesar;
 	
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
 	
 	@Test
 	void verschluesselnTest() {
